@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggrs Player Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Main Menu -->
+        <div id="player-menu" class="menu-container">
+            <div class="menu-content">
+                <div class="menu-header">
+                    <div class="logo-container">
+                        <img src="img/bloggrs_logo.png" alt="Bloggrs Logo" class="logo">
+                    </div>
+                    <div class="close-btn" id="close-menu">&times;</div>
+                </div>
+                
+                <div class="player-info">
+                    <div class="player-name" id="player-name">Loading...</div>
+                    <div class="money-container">
+                        <div class="money-item">
+                            <i class="fas fa-wallet"></i>
+                            <span>Cash: $<span id="player-cash">0</span></span>
+                        </div>
+                        <div class="money-item">
+                            <i class="fas fa-university"></i>
+                            <span>Bank: $<span id="player-bank">0</span></span>
+                        </div>
+                    </div>
+                    <div class="transfer-money">
+                        <button id="deposit-btn">Deposit</button>
+                        <button id="withdraw-btn">Withdraw</button>
+                    </div>
+                </div>
+                
+                <div class="inventory-container">
+                    <div class="inventory-header">
+                        <h2>Inventory</h2>
+                        <div class="inventory-stats">
+                            <span id="inventory-weight">0.0</span>/<span id="max-weight">30.0</span> kg
+                        </div>
+                    </div>
+                    
+                    <div class="inventory-categories">
+                        <button class="category-btn active" data-category="all">All</button>
+                        <button class="category-btn" data-category="consumable">Consumables</button>
+                        <button class="category-btn" data-category="food">Food</button>
+                        <button class="category-btn" data-category="drugs">Drugs</button>
+                        <button class="category-btn" data-category="tools">Tools</button>
+                        <button class="category-btn" data-category="medical">Medical</button>
+                        <button class="category-btn" data-category="electronics">Electronics</button>
+                    </div>
+                    
+                    <div class="inventory-items" id="inventory-items">
+                        <!-- Items will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Item Actions Modal -->
+        <div id="item-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-item-name">Item Name</h2>
+                    <div class="close-btn" id="close-modal">&times;</div>
+                </div>
+                <div class="modal-body">
+                    <div class="item-info">
+                        <div class="item-img-container">
+                            <img id="modal-item-img" src="img/items/default.png" alt="Item">
+                        </div>
+                        <div class="item-details">
+                            <p id="modal-item-description">Item description goes here.</p>
+                            <p>Weight: <span id="modal-item-weight">0.0</span> kg</p>
+                            <p>Quantity: <span id="modal-item-quantity">0</span></p>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button id="use-item" class="action-btn">Use</button>
+                        <button id="give-item" class="action-btn">Give</button>
+                        <button id="drop-item" class="action-btn">Drop</button>
+                    </div>
+                    <div id="quantity-selector" class="quantity-selector">
+                        <button id="decrease-quantity">-</button>
+                        <input type="number" id="quantity-input" value="1" min="1">
+                        <button id="increase-quantity">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Money Transfer Modal -->
+        <div id="money-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="money-modal-title">Transfer Money</h2>
+                    <div class="close-btn" id="close-money-modal">&times;</div>
+                </div>
+                <div class="modal-body">
+                    <div class="money-transfer-info">
+                        <p id="money-modal-description">Transfer money between cash and bank.</p>
+                        <div class="money-input-container">
+                            <label for="money-amount">Amount:</label>
+                            <input type="number" id="money-amount" value="100" min="1">
+                        </div>
+                    </div>
+                    <div class="money-actions">
+                        <button id="confirm-money-transfer" class="action-btn">Confirm</button>
+                        <button id="cancel-money-transfer" class="action-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notification System -->
+        <div id="notification-container">
+            <!-- Notifications will be added here dynamically -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

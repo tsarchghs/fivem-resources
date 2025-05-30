@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggrs Courier Job</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Main UI Container -->
+        <div class="main-container" id="main-container">
+            <div class="panel-content">
+                <div class="panel-header">
+                    <img src="img/logo.png" alt="Bloggrs Logo" class="logo-small">
+                    <h2>Weed Courier Job</h2>
+                    <div class="close-btn" id="close-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="job-content">
+                    <div class="user-info">
+                        <h3>Welcome, <span id="username-display">User</span></h3>
+                        <div id="admin-badge" class="admin-badge">ADMIN</div>
+                    </div>
+                    
+                    <div class="job-description">
+                        <h3>Job Description</h3>
+                        <p>Transport weed packages to various locations around the city. Complete all deliveries to receive your payment of 200g of weed.</p>
+                        <p class="warning">Be careful! Law enforcement might be watching.</p>
+                    </div>
+                    
+                    <div class="job-commands">
+                        <h3>Commands</h3>
+                        <ul>
+                            <li><span class="command">/courierjob</span> - Start a new courier job</li>
+                            <li><span class="command">/cancelcourier</span> - Cancel your current job</li>
+                            <li><span class="command">/couriermenu</span> - Open this menu (or press F7)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button id="start-job-btn" class="action-btn">Start Courier Job</button>
+                        <button id="cancel-job-btn" class="action-btn cancel">Cancel Courier Job</button>
+                    </div>
+                    
+                    <div class="job-status" id="job-status">
+                        <h3>Status: <span id="status-text">Not Active</span></h3>
+                        <div class="progress-bar">
+                            <div class="progress" id="job-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Container -->
+        <div id="notification-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

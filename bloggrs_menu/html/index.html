@@ -1,0 +1,38 @@
+<!-- html/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bloggrs HUD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display:none;">
+    <!-- Top bar with logo and money -->
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="img/bloggrs_logo.png" alt="Bloggrs Logo" class="logo">
+        </div>
+        <div class="money-container">
+            <div class="money-item">
+                <span class="money-label">Cash</span>
+                <span class="money-value">$<span id="cash">0</span></span>
+            </div>
+            <div class="money-separator"></div>
+            <div class="money-item">
+                <span class="money-label">Bank</span>
+                <span class="money-value">$<span id="bank">0</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom-left time display -->
+    <div class="time-container">
+        <div class="time-wrapper">
+            <span id="time">00:00</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
